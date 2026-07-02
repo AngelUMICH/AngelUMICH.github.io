@@ -39,22 +39,22 @@
 
   <meta name="author" content="Angel Chavira" />
   <meta name="description" content="Software Developer with a passion for backend development and artificial intelligence." />
-  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicon/apple-icon-57x57.png?v=2" />
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicon/apple-icon-60x60.png?v=2" />
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-icon-72x72.png?v=2" />
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon/apple-icon-76x76.png?v=2" />
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-icon-114x114.png?v=2" />
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon/apple-icon-120x120.png?v=2" />
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicon/apple-icon-144x144.png?v=2" />
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicon/apple-icon-152x152.png?v=2" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-icon-180x180.png?v=2" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-icon-192x192.png?v=2" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png?v=2" />
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon/favicon-96x96.png?v=2" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png?v=2" />
   <link rel="manifest" href="assets/img/favicon/manifest.json" />
   <meta name="msapplication-TileColor" content="#0b0d10" />
-  <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png" />
+  <meta name="msapplication-TileImage" content="assets/img/favicon/ms-icon-144x144.png?v=2" />
   <meta name="theme-color" content="#0b0d10" />
   <meta name="robots" content="index, follow" />
   <!-- Google Site Verification for indexing -->
@@ -62,6 +62,8 @@
 </head>
 
 <body>
+  <canvas id="sparkle-canvas" aria-hidden="true"></canvas>
+
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
   height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -85,13 +87,21 @@
         class="resume-link" aria-label="Open Angel's resume in a new tab">Resume</a>
     </div>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
+    <div class="nav-actions">
+      <button class="sparkle-toggle" id="sparkle-toggle" aria-label="Toggle background sparkle effect" aria-pressed="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path>
+        </svg>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
   </nav>
 
   <!-- Main Content-->
@@ -119,7 +129,7 @@
           </div>
           <div class="hero-visual" aria-hidden="true">
             <svg viewBox="0 0 200 180" width="100%" height="100%">
-              <g stroke="#7c6cf6" stroke-opacity="0.35" stroke-width="1">
+              <g stroke="var(--accent)" stroke-opacity="0.35" stroke-width="1">
                 <line x1="45" y1="45" x2="100" y2="70"></line>
                 <line x1="100" y1="70" x2="155" y2="50"></line>
                 <line x1="100" y1="70" x2="90" y2="130"></line>
@@ -127,12 +137,12 @@
                 <line x1="90" y1="130" x2="40" y2="150"></line>
                 <line x1="155" y1="50" x2="150" y2="140"></line>
               </g>
-              <circle cx="45" cy="45" r="5" fill="#7c6cf6" fill-opacity="0.85"></circle>
-              <circle cx="100" cy="70" r="6" fill="#7c6cf6"></circle>
-              <circle cx="155" cy="50" r="4" fill="#7c6cf6" fill-opacity="0.6"></circle>
-              <circle cx="90" cy="130" r="5" fill="#7c6cf6" fill-opacity="0.85"></circle>
-              <circle cx="150" cy="140" r="4" fill="#7c6cf6" fill-opacity="0.6"></circle>
-              <circle cx="40" cy="150" r="4" fill="#7c6cf6" fill-opacity="0.6"></circle>
+              <circle cx="45" cy="45" r="5" fill="var(--accent)" fill-opacity="0.85"></circle>
+              <circle cx="100" cy="70" r="6" fill="var(--accent)"></circle>
+              <circle cx="155" cy="50" r="4" fill="var(--accent)" fill-opacity="0.6"></circle>
+              <circle cx="90" cy="130" r="5" fill="var(--accent)" fill-opacity="0.85"></circle>
+              <circle cx="150" cy="140" r="4" fill="var(--accent)" fill-opacity="0.6"></circle>
+              <circle cx="40" cy="150" r="4" fill="var(--accent)" fill-opacity="0.6"></circle>
             </svg>
           </div>
         </div>
@@ -539,6 +549,9 @@
       </div>
     </section>
   </main>
+
+  <!-- Background sparkle cascade effect -->
+  <script src="assets/js/sparkles.js"></script>
 
   <!-- typed.js -->
   <script src="assets/vendor/typed.js/typed.min.js"></script>

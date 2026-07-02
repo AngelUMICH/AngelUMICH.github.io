@@ -9,8 +9,8 @@
   --text: #f2f3f4;
   --text-secondary: #b3b9c0;
   --text-muted: #7c848d;
-  --accent: #7c6cf6;
-  --accent-hover: #9384f9;
+  --accent: #f0ead6;
+  --accent-hover: #f7f2e3;
   --accent-text: #0b0d10;
   --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -150,6 +150,12 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
 }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-toggle {
   display: none;
   width: 36px;
@@ -166,6 +172,46 @@ h1, h2, h3, h4, h5, h6 {
 .nav-toggle svg {
   width: 18px;
   height: 18px;
+}
+
+/* ---------- Sparkle background ---------- */
+
+#sparkle-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.sparkle-toggle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+  flex-shrink: 0;
+}
+
+.sparkle-toggle:hover {
+  border-color: var(--accent);
+}
+
+.sparkle-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.sparkle-toggle.is-off {
+  color: var(--text-muted);
+  opacity: 0.6;
 }
 
 /* ---------- Buttons ---------- */
